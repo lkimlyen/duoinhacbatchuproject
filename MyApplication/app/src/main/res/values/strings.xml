@@ -4,4 +4,6 @@
     <string name="fb_login_protocol_scheme">fb1429661737070054</string>
     <string name="dang_nhap_facebook">Đăng nhập</string>
     <string name="font_name"></string>
+    <string name="dang_nhap_thanh_cong">Đăng nhập thành công</string>
+    <string name="dang_nhap_that_bai">Đăng nhập thất bại</string>
 </resources>
