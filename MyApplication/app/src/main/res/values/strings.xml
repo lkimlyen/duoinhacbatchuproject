@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DuoiHinhBatChuApp</string>
+    <string name="facebook_app_id">1429661737070054</string>
+    <string name="fb_login_protocol_scheme">fb1429661737070054</string>
+    <string name="dang_nhap_facebook">Đăng nhập</string>
+    <string name="font_name"></string>
 </resources>
