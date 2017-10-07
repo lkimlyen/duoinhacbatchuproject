@@ -45,7 +45,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".screen.loading.LoadingDrawActivity"></activity>
+        <activity android:name=".screen.loading.LoadingDrawActivity" />
+        <activity android:name=".screen.menu.MenuActivity" />
     </application>
 
 </manifest>

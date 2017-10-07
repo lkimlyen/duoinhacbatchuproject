@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginPresenter implements LoginContract.Presenter {
     private final String TAG = LoginPresenter.class.getName();
-    private FirebaseAuth mAuth;
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     LoginContract.View view;
 
     public LoginPresenter(LoginContract.View view) {
@@ -64,5 +64,9 @@ public class LoginPresenter implements LoginContract.Presenter {
     public void checkUserLogin() {
         FirebaseUser user = mAuth.getCurrentUser();
         view.goToMenuScreen(user);
+    }
+
+    public void setupPresenter(){
+        view.setPresenter(this);
     }
 }

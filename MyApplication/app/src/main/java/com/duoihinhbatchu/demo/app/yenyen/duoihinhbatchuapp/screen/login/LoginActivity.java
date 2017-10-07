@@ -10,13 +10,15 @@ import com.duoihinhbatchu.demo.app.yenyen.duoihinhbatchuapp.app.base.BaseActivit
 public class LoginActivity extends BaseActivity {
 
     LoginFragment loginFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
-
-
+        initFragment();
+        initPresenter();
     }
+
     private void initFragment() {
         loginFragment = (LoginFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
         if (loginFragment == null) {
@@ -24,10 +26,15 @@ public class LoginActivity extends BaseActivity {
             addFragmentToBackStack(loginFragment, R.id.fragmentContainer);
         }
     }
+
     private void addFragmentToBackStack(LoginFragment fragment, int frameId) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(frameId, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    private void initPresenter() {
+        new LoginPresenter(loginFragment).setupPresenter();
     }
 }

@@ -140,6 +140,4 @@ public class LoginFragment extends BaseFragment implements LoginContract.View {
             }
         }
     }
-
-
 }
